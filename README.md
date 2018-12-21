@@ -4,7 +4,7 @@ This is an example app where a web browser, three express/nodejs services and an
 
 # Example of what it looks like
 
-<img src="sequencediagram.png" style="float: center; margin-right: 10px;" />
+<img src="sequencediagram.png" style="float: center; margin-right: 10px; width: 60%; height: 60%" />
 
 
 
