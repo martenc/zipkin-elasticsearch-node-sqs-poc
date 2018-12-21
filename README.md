@@ -2,9 +2,8 @@
 This is an example app where a web browser, three express/nodejs services and an AWS SQS queue collaborate on an http request. Notably, timing of these requests are recorded into [Zipkin](http://zipkin.io/) and uses ElasticSearch as the datastore. You can use Kibana to view/visualze the data, which usually runs on another instance/VM. However, you can also use [dejavu](https://github.com/appbaseio/dejavu), which is a handy UI for ES. This allows you to see the how long the whole operation took, as well how much time was spent in each service. To persist the trace context across system boundaries (in this case from the node apps to SQS), I'm stuffing the entire trace context into the message body. Probably not ideal, but it works.
 
 
-# Example of what it looks like
 
-<img src="sequencediagram.png" style="float: center; margin-right: 10px; width: 60%; height: 60%" />
+<img src="sequencediagram.png" style="float: center; margin-right: 10px;" width="60%" height="60%" />
 
 
 
