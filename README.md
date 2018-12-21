@@ -4,30 +4,7 @@ This is an example app where a web browser, three express/nodejs services and an
 
 # Example of what it looks like
 
-+-------------+   +-------------+                 +---------+           +------+
-| Order Create|   |API/Worker   |                 |SQS      |           |ELK   |
-+-------------+   +-----+-------+                 +----+----+           +---+--+
-      |Request          |                              |                    |
-      +---------------> |                              |                    |
-      |                 | +------------------------+   |                    |
-      |                 | | trace instrumentation  |   |                    |
-      |                 | +------------------------+   |                    |
-      |                 |                            +-++                   |
-      |                 |  enqueue                   |  |                   |
-      |                 +--------------------------> |  | +--------------+  |
-      |                 |                            |  | |lambda trigger|  |
-      |                 |                 dequeue    |  | +--------------+  |
-      |                 |  <-------------------------+  |   ...or poll which
-      |                 |                            +-++   is less event   |
-      |                 |                              |    driven          |
-      |                 |  async record context        |                    |
-      |                 +-------------------------------------------------> |
-      |                 |  +-----------------------+   |                    |
-      |                 |  | TraceID, SpanID       |   |                    |
-      |                 |  +-----------------------+   |                    |
-+-----+-------+   +-----+-------+                 +----+----+           +---+--+
-| Order Create|   |API/Worker   |                 |SQS      |           |ELK   |
-+-------------+   +-------------+                 +---------+           +------+
+<img src="sequencediagram.png" style="float: center; margin-right: 10px;" />
 
 
 
