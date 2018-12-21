@@ -1,0 +1,33 @@
+{
+  "name": "zipkin-elasticsearch-node-sqs-poc",
+  "version": "0.0.1",
+  "description": "Example project that uses zipkin with elasticsearch",
+  "repository": "https://github.com/martenc/zipkin-elasticsearch-node-sqs-poc",
+  "scripts": {
+    "lint": "eslint .",
+    "start": "nodemon servers.js",
+    "browserify": "browserify browser.js -o bundle.js"
+  },
+  "dependencies": {
+    "aws-sdk": "~2.1.36",
+    "browser-process-hrtime": "^0.1.2",
+    "express": "^4.14.0",
+    "request": "^2.88.0",
+    "rest": "^1.3.2",
+    "sqs-consumer": "^3.8.0",
+    "zipkin": "^0.11.1",
+    "zipkin-context-cls": "^0.11.0",
+    "zipkin-instrumentation-cujojs-rest": "^0.11.1",
+    "zipkin-instrumentation-express": "^0.11.1",
+    "zipkin-instrumentation-fetch": "^0.11.1",
+    "zipkin-transport-http": "^0.11.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.2.0"
+  }
+}
